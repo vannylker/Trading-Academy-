@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tags para SEO -->
+    <title>Curso de Trading Grátis - Aprenda Análise Técnica do Zero | Trading Academy</title>
+    <meta name="description" content="Curso completo de trading gratuito. Aprenda análise técnica, price action, gestão de risco e psicologia do trader. Do básico ao avançado com exemplos práticos.">
+    <meta name="keywords" content="curso trading gratuito, análise técnica, price action, candlesticks, suporte e resistência, gestão de risco, psicologia do trader">
+    <meta name="author" content="Trading Academy">
+    
+    <!-- Open Graph para redes sociais -->
+    <meta property="og:title" content="Curso de Trading Grátis - Aprenda Análise Técnica do Zero">
+    <meta property="og:description" content="Curso completo de trading gratuito. Aprenda do zero como operar no mercado financeiro.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tradingacademy.com">
+    <meta property="og:image" content="https://tradingacademy.com/images/og-image.jpg">
+    
+    <!-- Schema.org para rich snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Curso Completo de Trading",
+        "description": "Curso gratuito de trading com análise técnica, price action, gestão de risco e psicologia do trader",
+        "provider": {
+            "@type": "Organization",
+            "name": "Trading Academy",
+            "sameAs": "https://tradingacademy.com"
+        },
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "courseWorkload": "PT40H"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0a192f;
+            --secondary-dark: #112240;
+            --accent-green: #00d4aa;
+            --accent-blue: #64ffda;
+            --text-primary: #e6f1ff;
+            --text-secondary: #8892b0;
+            --danger: #ff4757;
+            --warning: #ffa502;
+            --success: #2ed573;
+            --border-color: #233554;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--accent-green);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-green);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--accent-blue);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--accent-green);
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--accent-green);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 10rem 0 5rem;
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path d="M0,50 Q250,0 500,50 T1000,50 V100 H0 Z" fill="%23112240"/></svg>');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-green);
+            color: var(--primary-dark);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-blue);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent-green);
+            border: 2px solid var(--accent-green);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(0, 212, 170, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        /* Conteúdo Principal */
+        main {
+            padding: 4rem 0;
+        }
+        
+        .content-section {
+            background-color: var(--secondary-dark);
+            border-radius: 15px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .article-content {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Boxes de Destaque */
+        .info-box {
+            background-color: rgba(0, 212, 170, 0.1);
+            border-left: 4px solid var(--accent-green);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning-box {
+            background-color: rgba(255, 165, 2, 0.1);
+            border-left: 4px solid var(--warning);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .danger-box {
+            background-color: rgba(255, 71, 87, 0.1);
+            border-left: 4px solid var(--danger);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        /* Imagens e Gráficos */
+        .chart-container {
+            background-color: var(--primary-dark);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        
+        .chart-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .image-caption {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        
+        /* Ferramentas Interativas */
+        .tool-section {
+            background-color: var(--primary-dark);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 3rem 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .tool-title {
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .candle-selector {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .tool-btn {
+            padding: 1rem 1.5rem;
+            background-color: var(--secondary-dark);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tool-btn:hover {
+            border-color: var(--accent-green);
+            transform: translateY(-2px);
+        }
+        
+        .tool-btn.active {
+            border-color: var(--accent-green);
+            background-color: rgba(0, 212, 170, 0.1);
+        }
+        
+        .visualization {
+            height: 300px;
+            background-color: var(--secondary-dark);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            position: relative;
+            margin: 2rem 0;
+            padding: 1rem;
+        }
+        
+        /* Tabelas */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: var(--primary-dark);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        
+        .comparison-table th {
+            background-color: rgba(0, 212, 170, 0.2);
+            padding: 1.2rem;
+            text-align: left;
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 1rem 1.2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+        
+        .comparison-table tr:hover {
+            background-color: rgba(0, 212, 170, 0.05);
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            margin-top: 4rem;
+        }
+        
+        .faq-item {
+            background-color: var(--secondary-dark);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(0, 212, 170, 0.05);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-secondary);
+        }
+        
+        .faq-answer.show {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--secondary-dark), var(--primary-dark));
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 4rem 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 2rem auto 0;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--primary-dark);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--accent-green);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-dark);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            color: var(--accent-green);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-green);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-dark);
+            border-radius: 50%;
+            color: var(--accent-green);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-green);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            margin: 1rem 0 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--accent-green);
+            text-decoration: none;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .content-section {
+                padding: 2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-dark);
+                flex-direction: column;
+                padding: 1rem 0;
+                border-top: 1px solid var(--border-color);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 8rem 0 3rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .tool-section {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content-section {
+                padding: 1.5rem;
+            }
+            
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                Trading<span style="color: var(--accent-blue)">Academy</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="#home" class="active">Início</a></li>
+                    <li><a href="#curso">Curso</a></li>
+                    <li><a href="#ferramentas">Ferramentas</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Curso Completo de Trading Grátis</h1>
+            <p class="hero-subtitle">
+                Aprenda análise técnica, price action, gestão de risco e psicologia do trader. 
+                Do básico ao avançado com exemplos práticos. Sem promessas milagrosas, apenas educação de qualidade.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="#curso" class="btn btn-primary">
+                    <i class="fas fa-play-circle"></i>
+                    Começar Curso
+                </a>
+                <a href="#ferramentas" class="btn btn-secondary">
+                    <i class="fas fa-tools"></i>
+                    Ferramentas Gratuitas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#home">Início</a> > <a href="#curso">Curso de Trading</a> > <span>Aula 1: Introdução</span>
+        </div>
+
+        <!-- Artigo Principal -->
+        <article class="content-section" id="curso">
+            <h2>Módulo 1: Fundamentos do Trading</h2>
+            
+            <div class="article-content">
+                <h3>O Que Realmente é Trading?</h3>
+                <p>
+                    Trading é a atividade de comprar e vender ativos financeiros nos mercados, 
+                    com o objetivo de obter lucro com as variações de preço. Diferente do que muitos "gurus" pregam, 
+                    trading é uma profissão que exige estudo constante, disciplina psicológica e gestão de risco rigorosa.
+                </p>
+                
+                <div class="warning-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Alerta Importante</h4>
+                    <p>
+                        95% dos traders iniciantes perdem dinheiro nos primeiros anos. As principais causas são: 
+                        falta de educação adequada, gestão de risco pobre e controle emocional insuficiente. 
+                        Este curso foi criado para ajudá-lo a fazer parte dos 5% que têm sucesso.
+                    </p>
+                </div>
+                
+                <h3>Tipos de Mercados Financeiros</h3>
+                <p>
+                    Antes de começar a operar, você precisa entender os diferentes mercados disponíveis:
+                </p>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Mercado</th>
+                            <th>Descrição</th>
+                            <th>Recomendação para Iniciantes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ações</strong></td>
+                            <td>Partes de empresas de capital aberto negociadas em bolsas</td>
+                            <td>Bom para começar, mais previsível</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Forex</strong></td>
+                            <td>Mercado de câmbio de moedas internacionais</td>
+                            <td>Alta liquidez, funciona 24h</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Criptomoedas</strong></td>
+                            <td>Moedas digitais como Bitcoin e Ethereum</td>
+                            <td>Muito volátil, apenas para traders experientes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Índices</strong></td>
+                            <td>Cestas de ações como S&P500, NASDAQ</td>
+                            <td>Menos volátil que ações individuais</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Análise Técnica vs. Análise Fundamentalista</h3>
+                <p>
+                    Existem duas escolas principais de análise para traders:
+                </p>
+                
+                <div class="chart-container">
+                    <h4>Comparativo: Análise Técnica vs. Fundamentalista</h4>
+                    <!-- Gráfico comparativo -->
+                    <div style="display: flex; justify-content: center; margin: 2rem 0;">
+                        <div style="width: 100%; max-width: 600px;">
+                            <div style="display: flex; margin-bottom: 1rem;">
+                                <div style="flex: 1; background-color: rgba(0, 212, 170, 0.3); padding: 1rem; border-radius: 5px; margin-right: 1rem;">
+                                    <div style="font-weight: 600; color: var(--accent-green); margin-bottom: 0.5rem;">Análise Técnica</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                        • Estuda movimento de preços<br>
+                                        • Usa gráficos e indicadores<br>
+                                        • Foco no timing de entrada/saída<br>
+                                        • Curto/médio prazo
+                                    </div>
+                                </div>
+                                <div style="flex: 1; background-color: rgba(100, 255, 218, 0.3); padding: 1rem; border-radius: 5px;">
+                                    <div style="font-weight: 600; color: var(--accent-blue); margin-bottom: 0.5rem;">Análise Fundamentalista</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                        • Analisa dados da empresa/país<br>
+                                        • Usa balanços e indicadores econômicos<br>
+                                        • Foco no valor intrínseco<br>
+                                        • Longo prazo
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-caption">Neste curso focaremos em Análise Técnica, especificamente em Price Action</div>
+                </div>
+                
+                <div class="info-box">
+                    <h4><i class="fas fa-lightbulb"></i> Por Que Price Action?</h4>
+                    <p>
+                        Price Action (Ação do Preço) é o estudo do movimento do preço em si, sem o uso de indicadores complexos. 
+                        É considerado o método mais puro de análise técnica porque:
+                    </p>
+                    <ul>
+                        <li>Funciona em qualquer mercado (ações, forex, cripto)</li>
+                        <li>Funciona em qualquer timeframe (1 minuto, 1 hora, 1 dia)</li>
+                        <li>Não fica defasado como indicadores</li>
+                        <li>Desenvolve sua intuição de mercado</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- Ferramentas Interativas -->
+        <section class="tool-section" id="ferramentas">
+            <h2 class="tool-title"><i class="fas fa-tools"></i> Ferramentas de Aprendizado</h2>
+            
+            <div class="article-content">
+                <h3>Simulador de Candlesticks</h3>
+                <p>
+                    As velas japonesas (candlesticks) são a base da análise gráfica. 
+                    Cada vela mostra a batalha entre compradores (bulls) e vendedores (bears) em um período de tempo.
+                </p>
+                
+                <div class="candle-selector">
+                    <button class="tool-btn" data-candle="bullish" id="bullishBtn">
+                        <i class="fas fa-arrow-up" style="color: var(--success)"></i>
+                        Vela de Alta
+                    </button>
+                    <button class="tool-btn" data-candle="bearish" id="bearishBtn">
+                        <i class="fas fa-arrow-down" style="color: var(--danger)"></i>
+                        Vela de Baixa
+                    </button>
+                    <button class="tool-btn" data-candle="doji" id="dojiBtn">
+                        <i class="fas fa-minus"></i>
+                        Doji (Indecisão)
+                    </button>
+                    <button class="tool-btn" data-candle="hammer" id="hammerBtn">
+                        <i class="fas fa-hammer"></i>
+                        Martelo (Reversão)
+                    </button>
+                </div>
+                
+                <div class="visualization" id="candleDemo">
+                    <!-- Conteúdo gerado por JavaScript -->
+                    <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-secondary)">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <p style="color: var(--text-secondary)">Clique em um tipo de vela para visualizar</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="candleExplanation" style="color: var(--text-secondary); margin-top: 1rem;">
+                    <p>Selecione um tipo de vela para ver sua explicação detalhada.</p>
+                </div>
+                
+                <h3>Calculadora de Gestão de Risco</h3>
+                <p>
+                    A gestão de risco é o aspecto MAIS IMPORTANTE do trading. 
+                    Use esta calculadora para determinar o tamanho correto da sua posição.
+                </p>
+                
+                <div class="chart-container">
+                    <div style="max-width: 500px; margin: 0 auto;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--accent-green);">
+                                <i class="fas fa-wallet"></i> Capital Total (R$)
+                            </label>
+                            <input type="number" id="capital" class="newsletter-input" value="10000" min="1000" step="1000">
+                        </div>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--accent-green);">
+                                <i class="fas fa-percentage"></i> Risco por Operação (%)
+                            </label>
+                            <input type="range" id="riskPercent" min="0.5" max="5" step="0.5" value="1" style="width: 100%;">
+                            <div style="display: flex; justify-content: space-between; margin-top: 0.5rem;">
+                                <span style="color: var(--text-secondary); font-size: 0.8rem;">0.5%</span>
+                                <span id="riskValue" style="color: var(--accent-green); font-weight: 600;">1%</span>
+                                <span style="color: var(--text-secondary); font-size: 0.8rem;">5%</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--accent-green);">
+                                <i class="fas fa-exchange-alt"></i> Distância do Stop Loss (pontos)
+                            </label>
+                            <input type="number" id="stopDistance" class="newsletter-input" value="50" min="10" step="10">
+                        </div>
+                        
+                        <button class="btn btn-primary" id="calculateRisk" style="width: 100%;">
+                            <i class="fas fa-calculator"></i> Calcular Tamanho da Posição
+                        </button>
+                        
+                        <div id="riskResult" style="margin-top: 2rem; padding: 1.5rem; background-color: var(--secondary-dark); border-radius: 8px; display: none;">
+                            <h4 style="color: var(--accent-green); margin-bottom: 1rem;">Resultado:</h4>
+                            <div style="color: var(--text-secondary);">
+                                <p>Capital a arriscar: <span id="riskAmount" style="color: var(--accent-green); font-weight: 600;"></span></p>
+                                <p>Tamanho da posição: <span id="positionSize" style="color: var(--accent-green); font-weight: 600;"></span></p>
+                                <p>Stop Loss: <span id="stopLoss" style="color: var(--danger); font-weight: 600;"></span> pontos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="danger-box">
+                    <h4><i class="fas fa-skull-crossbones"></i> Regra de Ouro do Trading</h4>
+                    <p>
+                        NUNCA arrisque mais de 2% do seu capital em uma única operação. 
+                        A maioria dos traders profissionais arrisca apenas 0.5% a 1.5%. 
+                        Esta é a única forma de sobreviver no longo prazo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-container" id="faq">
+            <h2>Perguntas Frequentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quanto tempo leva para aprender trading?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Leva em média 1-2 anos de estudo dedicado para se tornar um trader consistente. 
+                        Os primeiros 6 meses devem ser apenas em conta demo. Trading é uma profissão como qualquer outra 
+                        que exige tempo para dominar.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quanto dinheiro preciso para começar?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Para começar em conta demo: R$ 0. Para começar com dinheiro real: o mínimo que sua corretora permitir 
+                        (geralmente R$ 100-500), mas recomendamos pelo menos R$ 2.000-5.000 para poder aplicar gestão de risco adequada.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    É possível viver apenas de trading?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Sim, é possível, mas não é fácil. Apenas uma pequena minoria consegue. 
+                        Você precisa de: 1) Estratégia consistente, 2) Gestão de risco rigorosa, 
+                        3) Controle emocional, 4) Capital suficiente. A maioria leva 3-5 anos para chegar nesse nível.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quais são os maiores erros dos iniciantes?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        1) Operar sem stop loss<br>
+                        2) Arriscar muito por operação<br>
+                        3) Buscar "revenge trading" após perdas<br>
+                        4) Usar alavancagem alta<br>
+                        5) Acreditar em métodos "milagrosos"<br>
+                        6) Não manter um diário de operações
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter" id="contato">
+            <h2>Continue Seu Aprendizado</h2>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1rem;">
+                Receba lições avançadas, análises de mercado e conteúdos exclusivos diretamente no seu e-mail.
+            </p>
+            
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail" required>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Inscrever
+                </button>
+            </form>
+            
+            <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 1rem;">
+                Não enviaremos spam. Você pode cancelar a qualquer momento.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Trading Academy</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Educação séria em trading desde 2023. Focada em análise técnica, 
+                        gestão de risco e psicologia do trader.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#curso">Curso Completo</a></li>
+                        <li><a href="#ferramentas">Ferramentas</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Recursos Gratuitos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" id="glossaryLink">Glossário do Trader</a></li>
+                        <li><a href="#" id="diaryLink">Modelo de Diário</a></li>
+                        <li><a href="#" id="checklistLink">Checklist de Operações</a></li>
+                        <li><a href="#" id="booksLink">Livros Recomendados</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Informações Legais</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Aviso de Risco</a></li>
+                        <li><a href="#">Isenção de Responsabilidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>
+                    © 2023 Trading Academy. Todos os direitos reservados. | 
+                    Trading envolve riscos significativos de perda. Nunca invista com dinheiro que você não pode perder.
+                </p>
+                <p style="margin-top: 0.5rem;">
+                    Este site é apenas para fins educacionais. Não fornecemos recomendações de investimento.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainMenu = document.getElementById('mainMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainMenu.classList.toggle('show');
+            mobileMenuBtn.innerHTML = mainMenu.classList.contains('show') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Fechar menu mobile se aberto
+                    mainMenu.classList.remove('show');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Atualizar menu ativo
+                    document.querySelectorAll('#mainMenu a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Fechar todas as outras respostas
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    if(item !== answer) {
+                        item.classList.remove('show');
+                        item.previousElementSibling.querySelector('i').className = 'fas fa-chevron-down';
+                    }
+                });
+                
+                // Alternar resposta atual
+                answer.classList.toggle('show');
+                icon.className = answer.classList.contains('show') 
+                    ? 'fas fa-chevron-up' 
+                    : 'fas fa-chevron-down';
+            });
+        });
+        
+        // Simulador de Candlesticks
+        const candleButtons = document.querySelectorAll('.tool-btn[data-candle]');
+        const candleDemo = document.getElementById('candleDemo');
+        const candleExplanation = document.getElementById('candleExplanation');
+        
+        const candleData = {
+            bullish: {
+                title: "Vela de Alta (Bullish)",
+                color: "#2ed573",
+                bodyHeight: 60,
+                wickTop: 20,
+                wickBottom: 20,
+                explanation: "O preço de FECHAMENTO é MAIOR que o de ABERTURA. Isso significa que os COMPRADORES controlaram o período. Corpo grande indica convicção forte dos compradores."
+            },
+            bearish: {
+                title: "Vela de Baixa (Bearish)",
+                color: "#ff4757",
+                bodyHeight: 60,
+                wickTop: 20,
+                wickBottom: 20,
+                explanation: "O preço de FECHAMENTO é MENOR que o de ABERTURA. Isso significa que os VENDEDORES controlaram o período. Corpo grande indica convicção forte dos vendedores."
+            },
+            doji: {
+                title: "Doji (Indecisão)",
+                color: "#8892b0",
+                bodyHeight: 10,
+                wickTop: 40,
+                wickBottom: 40,
+                explanation: "ABERTURA e FECHAMENTO são aproximadamente IGUAIS. Indica indecisão do mercado, empate entre compradores e vendedores. Pode sinalizar possível reversão."
+            },
+            hammer: {
+                title: "Martelo (Hammer)",
+                color: "#2ed573",
+                bodyHeight: 30,
+                wickTop: 10,
+                wickBottom: 50,
+                explanation: "Pavio inferior LONGO, corpo pequeno na parte superior. Aparece em tendência de BAIXA. Sinal de reversão: vendedores empurraram o preço para baixo, mas compradores recuperaram a maior parte das perdas."
+            }
+        };
+        
+        candleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remover active de todos os botões
+                candleButtons.forEach(btn => btn.classList.remove('active'));
+                // Adicionar active ao botão clicado
+                button.classList.add('active');
+                
+                const candleType = button.dataset.candle;
+                const data = candleData[candleType];
+                
+                // Atualizar visualização
+                candleDemo.innerHTML = `
+                    <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                        <div style="width: 60px; height: 150px; position: relative;">
+                            <!-- Pavio superior -->
+                            <div style="position: absolute; left: 29px; top: 0; width: 2px; height: ${data.wickTop}px; background-color: ${data.color};"></div>
+                            <!-- Corpo da vela -->
+                            <div style="position: absolute; left: 20px; top: ${data.wickTop}px; width: 20px; height: ${data.bodyHeight}px; background-color: ${data.color}; border-radius: 3px;"></div>
+                            <!-- Pavio inferior -->
+                            <div style="position: absolute; left: 29px; top: ${data.wickTop + data.bodyHeight}px; width: 2px; height: ${data.wickBottom}px; background-color: ${data.color};"></div>
+                        </div>
+                    </div>
+                `;
+                
+                // Atualizar explicação
+                candleExplanation.innerHTML = `
+                    <h4 style="color: var(--accent-blue); margin-bottom: 0.5rem;">${data.title}</h4>
+                    <p>${data.explanation}</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                        <strong>Análise:</strong> ${candleType === 'bullish' ? 'Sinal de compra se em contexto de alta' : 
+                                                   candleType === 'bearish' ? 'Sinal de venda se em contexto de baixa' : 
+                                                   candleType === 'doji' ? 'Aguardar confirmação da próxima vela' : 
+                                                   'Potencial reversão de baixa para alta'}.
+                    </p>
+                `;
+            });
+        });
+        
+        // Inicializar com vela bullish
+        document.getElementById('bullishBtn').click();
+        
+        // Calculadora de Risco
+        const riskPercentSlider = document.getElementById('riskPercent');
+        const riskValue = document.getElementById('riskValue');
+        const calculateBtn = document.getElementById('calculateRisk');
+        const riskResult = document.getElementById('riskResult');
+        
+        riskPercentSlider.addEventListener('input', () => {
+            riskValue.textContent = `${riskPercentSlider.value}%`;
+        });
+        
+        calculateBtn.addEventListener('click', () => {
+            const capital = parseFloat(document.getElementById('capital').value);
+            const riskPercent = parseFloat(riskPercentSlider.value) / 100;
+            const stopDistance = parseFloat(document.getElementById('stopDistance').value);
+            
+            if (capital && stopDistance) {
+                const riskAmount = capital * riskPercent;
+                const positionSize = riskAmount / stopDistance;
+                
+                document.getElementById('riskAmount').textContent = `R$ ${riskAmount.toFixed(2)}`;
+                document.getElementById('positionSize').textContent = `${positionSize.toFixed(2)} unidades`;
+                document.getElementById('stopLoss').textContent = stopDistance;
+                
+                riskResult.style.display = 'block';
+                
+                // Feedback de risco
+                if (riskPercent > 0.02) {
+                    riskResult.style.borderLeft = '4px solid var(--danger)';
+                    riskResult.querySelector('h4').innerHTML = '<i class="fas fa-exclamation-triangle"></i> Risco Muito Alto!';
+                } else if (riskPercent > 0.015) {
+                    riskResult.style.borderLeft = '4px solid var(--warning)';
+                    riskResult.querySelector('h4').innerHTML = '<i class="fas fa-exclamation-circle"></i> Risco Moderado';
+                } else {
+                    riskResult.style.borderLeft = '4px solid var(--success)';
+                    riskResult.querySelector('h4').innerHTML = '<i class="fas fa-check-circle"></i> Risco Adequado';
+                }
+            }
+        });
+        
+        // Formulário de Newsletter
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Simular envio
+            alert(`Obrigado por se inscrever! As lições serão enviadas para: ${email}`);
+            this.reset();
+        });
+        
+        // Links de Recursos
+        document.getElementById('glossaryLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Glossário do Trader:\n\n• Bullish: Tendência de alta\n• Bearish: Tendência de baixa\n• Long: Posição comprada\n• Short: Posição vendida\n• Stop Loss: Ordem para limitar perdas\n• Take Profit: Ordem para realizar lucros\n• Margin: Capital garantidor\n• Leverage: Alavancagem\n• Spread: Diferença entre compra e venda');
+        });
+        
+        document.getElementById('diaryLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('📖 Modelo de Diário de Trading:\n\n1. Data e hora da operação\n2. Ativo negociado\n3. Direção (compra/venda)\n4. Preço de entrada\n5. Stop Loss definido\n6. Take Profit definido\n7. Razão da entrada\n8. Resultado (lucro/perda)\n9. Lições aprendidas\n\nMantenha este diário religiosamente!');
+        });
+        
+        // Atualizar menu ativo conforme scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id], article[id]');
+            const navLinks = document.querySelectorAll('#mainMenu a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Se no topo, ativar link "Início"
+            if (scrollY < 100) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                document.querySelector('#mainMenu a[href="#home"]').classList.add('active');
+            }
+        });
+        
+        // Analytics Simulado (para mostrar que pode ser integrado)
+        console.log('Trading Academy - Página carregada com sucesso');
+        console.log('Pronto para indexação no Google');
+    </script>
+</body>
+</html>
